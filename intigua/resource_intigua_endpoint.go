@@ -1,4 +1,4 @@
-package main
+package intigua
 
 import (
 	"github.com/hashicorp/terraform/helper/schema"
@@ -24,7 +24,7 @@ func resourceIntiguaEndpoint() *schema.Resource {
 				Type:     schema.TypeString,
 				Required: true,
 			},
-			"OS": &schema.Schema{
+			"os": &schema.Schema{
 				Type:     schema.TypeString,
 				Required: true,
 			},
