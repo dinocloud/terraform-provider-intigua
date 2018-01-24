@@ -13,20 +13,20 @@ func Provider() terraform.ResourceProvider  {
 
 				Type:        schema.TypeString,
 				Optional:    true,
-				Default:     "localhost",
+				DefaultFunc: schema.EnvDefaultFunc("INTIGUA_HOST", nil),
 				Description: descriptions["intigua_host"],
 			},
 			"username": {
 				Type:        schema.TypeString,
 				Optional:    true,
-				Default:     "admin",
+				DefaultFunc: schema.EnvDefaultFunc("INTIGUA_USER", nil),
 				Description: descriptions["intigua_username"],
 			},
 
 			"api_key": {
 				Type:        schema.TypeString,
 				Optional:    true,
-				Default:     "",
+				DefaultFunc: schema.EnvDefaultFunc("INTIGUA_API_KEY", nil),
 				Description: descriptions["intigua_api_key"],
 			},
 		},
