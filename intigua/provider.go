@@ -31,7 +31,11 @@ func Provider() terraform.ResourceProvider  {
 			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
-			"intigua_endpoint": resourceIntiguaEndpoint(),
+			"intigua_endpoint": 			   resourceIntiguaEndpoint(),
+			"intigua_connector": 			   resourceIntiguaConnector(),
+			"intigua_credential": 			   resourceIntiguaCredential(),
+			"intigua_credential_association": 	   resourceIntiguaCredentialAssociation(),
+			"intigua_management_service_registration": resourceIntiguaManagementServiceRegistration(),
 		},
 		ConfigureFunc: providerConfigure,
 
